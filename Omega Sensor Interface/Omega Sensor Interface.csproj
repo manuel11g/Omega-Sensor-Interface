@@ -35,6 +35,33 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Omega.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Omega.Designer.cs">
+      <DependentUpon>Omega.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OmegaSensorService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OmegaSensorService.Designer.cs">
+      <DependentUpon>OmegaSensorService.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Omega.resx">
+      <DependentUpon>Omega.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
