@@ -34,8 +34,24 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="DataContainer.xsc">
+      <DependentUpon>DataContainer.xsd</DependentUpon>
+    </None>
+    <None Include="DataContainer.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataContainer.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataContainer.xss">
+      <DependentUpon>DataContainer.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataContainer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataContainer.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Omega.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -52,6 +68,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Windows.Forms" />
@@ -61,6 +78,9 @@
     <EmbeddedResource Include="Omega.resx">
       <DependentUpon>Omega.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
